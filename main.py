@@ -99,3 +99,12 @@ def mostrar(tablero, filas, columnas, caracter):
                     print(tablero[i][j], end=" ")
                 elif isinstance(tablero[i][j], bool) and tablero[i][j]:
                     print("*", end=" ")
+                else:
+                    print(caracter, end=" ")
+            else:
+                if isinstance(tablero[i][j], (int, str)):
+                    print(tablero[i][j])
+                elif isinstance(tablero[i][j], bool) and tablero[i][j]:
+                    print("*")
+                else:
+                    print(caracter)
