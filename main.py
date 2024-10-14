@@ -141,3 +141,9 @@ def jugar(tablero, filas, columnas):
         fila, columna = jugada(filas, columnas)
         fila -= 1
         columna -= 1
+        if isinstance(tablero[fila][columna], int):
+            nueva[fila][columna] = tablero[fila][columna]
+            if tablero[fila][columna] == 0:
+                destapar(filas, columnas, fila, columna, tablero, nueva)
+        else:
+            mostrar(tablero, filas, columnas, " ")
