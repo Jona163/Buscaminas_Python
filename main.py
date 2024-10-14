@@ -108,3 +108,16 @@ def mostrar(tablero, filas, columnas, caracter):
                     print("*")
                 else:
                     print(caracter)
+
+# Destapar el tablero.
+def destapar(filas, columnas, fila, columna, tablero, nuevo):
+    nuevo[fila][columna] = tablero[fila][columna]
+    if tablero[fila][columna] == 0:
+        if fila > 0 and not tablero[fila - 1][columna] and nuevo[fila - 1][columna] != 0:
+            destapar(filas, columnas, fila - 1, columna, tablero, nuevo)
+        if fila < filas - 1 and not tablero[fila + 1][columna] and nuevo[fila + 1][columna] != 0:
+            destapar(filas, columnas, fila + 1, columna, tablero, nuevo)
+        if columna > 0 and not tablero[fila][columna - 1] and nuevo[fila][columna - 1] != 0:
+            destapar(filas, columnas, fila, columna - 1, tablero, nuevo)
+        if columna < columnas - 1 and not tablero[fila][columna + 1] and nuevo[fila][columna + 1] != 0:
+            destapar(filas, columnas, fila, columna + 1, tablero, nuevo)
