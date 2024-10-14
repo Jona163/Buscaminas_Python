@@ -49,3 +49,14 @@ def tablero1():
                 return tablero, 35, 30
             else:
                 print("Debe escoger una de las opciones del menú.")
+   else:
+        filas = int(input("Ingresa el número de filas que deseas: "))
+        columnas = int(input("Ingresa el número de columnas que desea: "))
+        while True:
+            mina = int(input("Ingresa el número de minas que desea: "))
+            if mina <= filas * columnas:
+                break
+            print(f"El número de minas debe ser menor que {filas * columnas}.")
+        tablero = matriz(filas, columnas)
+        minas(filas, columnas, tablero, mina)
+        return tablero, filas, columnas
