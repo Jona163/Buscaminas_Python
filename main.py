@@ -168,3 +168,4 @@ while jugar1:
     tablero, filas, columnas = tablero1()
     tablero = numeros(tablero, filas, columnas)
     jugar(tablero, filas, columnas)
+    jugar1 = int(input("¿Desea jugar otra vez? (sí = 1)(no = 0): "))
