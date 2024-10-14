@@ -83,3 +83,9 @@ def numeros(tablero, filas, columnas):
             if j < columnas - 1 and tablero[i][j + 1]:
                 n += 1
             if i < filas - 1 and j < columnas - 1 and tablero[i + 1][j + 1]:
+                n += 1
+            if not tablero[i][j]:
+                nueva[i][j] = n
+            else:
+                nueva[i][j] = "*"
+    return nueva
