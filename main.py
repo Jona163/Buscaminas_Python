@@ -89,3 +89,13 @@ def numeros(tablero, filas, columnas):
             else:
                 nueva[i][j] = "*"
     return nueva
+
+# Mostrar el tablero de juego.
+def mostrar(tablero, filas, columnas, caracter):
+    for i in range(filas):
+        for j in range(columnas):
+            if j != columnas - 1:
+                if isinstance(tablero[i][j], (int, str)):
+                    print(tablero[i][j], end=" ")
+                elif isinstance(tablero[i][j], bool) and tablero[i][j]:
+                    print("*", end=" ")
