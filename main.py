@@ -60,3 +60,16 @@ def tablero1():
         tablero = matriz(filas, columnas)
         minas(filas, columnas, tablero, mina)
         return tablero, filas, columnas
+
+# Poner las pistas, que son los números que aparecen en el tablero.
+def numeros(tablero, filas, columnas):
+    nueva = matriz(filas, columnas, ".")
+    for i in range(filas):
+        for j in range(columnas):
+            # Calcular el número de vecinos de la celda actual.
+            n = 0
+            if i > 0 and j > 0 and tablero[i - 1][j - 1]:
+                n += 1
+            if j > 0 and tablero[i][j - 1]:
+                n += 1
+            if i < filas - 1 and j > 0 and tablero[i + 1][j - 1]:
