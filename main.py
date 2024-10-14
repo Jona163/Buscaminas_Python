@@ -121,3 +121,14 @@ def destapar(filas, columnas, fila, columna, tablero, nuevo):
             destapar(filas, columnas, fila, columna - 1, tablero, nuevo)
         if columna < columnas - 1 and not tablero[fila][columna + 1] and nuevo[fila][columna + 1] != 0:
             destapar(filas, columnas, fila, columna + 1, tablero, nuevo)
+
+# Tomar la jugada del jugador.
+def jugada(filas, columnas):
+    print("Para hacer su jugada debe especificar tanto la fila como la columna.")
+    while True:
+        fila = int(input("Ingrese la fila: "))
+        columna = int(input("Ingrese la columna: "))
+        if 1 <= fila <= filas and 1 <= columna <= columnas:
+            break
+        print("Debe escoger una ficha que esté dentro del rango de fila y columna.")
+    return fila, columna
