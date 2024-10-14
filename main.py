@@ -13,3 +13,14 @@ def matriz(filas, columnas, caracter=False):
         v = [caracter] * columnas
         tablero.append(v)
     return tablero
+
+# Poner minas aleatoriamente, esta función no invoca ninguna otra función del programa.
+def minas(filas, columnas, tablero, minaz):
+    mi = 1
+    while mi <= minaz:
+        fil = randint(0, filas - 1)
+        col = randint(0, columnas - 1)
+        if not tablero[fil][col]:
+            tablero[fil][col] = True
+            mi += 1
+    return tablero
