@@ -161,3 +161,5 @@ print("Los números indican cuántas bombas hay alrededor.")
 print("El número 0 indica que no hay ninguna bomba alrededor.")
 print("Para seleccionar la ficha a destapar, especifica la fila y la columna.")
 print("¡Que empiece el juego!")
+
+jugar1 = True
