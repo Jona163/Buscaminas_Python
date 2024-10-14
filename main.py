@@ -153,3 +153,8 @@ def jugar(tablero, filas, columnas):
             print("¡Has ganado el juego!")
             print("¡Felicitaciones!")
             break
+
+# Iniciar el juego.
+print("Este es el clásico juego Buscaminas.")
+print("El juego consiste en descubrir todas las fichas que no tengan minas (representadas por \"*\").")
+print("Los números indican cuántas bombas hay alrededor.")
