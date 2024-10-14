@@ -158,3 +158,6 @@ def jugar(tablero, filas, columnas):
 print("Este es el clásico juego Buscaminas.")
 print("El juego consiste en descubrir todas las fichas que no tengan minas (representadas por \"*\").")
 print("Los números indican cuántas bombas hay alrededor.")
+print("El número 0 indica que no hay ninguna bomba alrededor.")
+print("Para seleccionar la ficha a destapar, especifica la fila y la columna.")
+print("¡Que empiece el juego!")
