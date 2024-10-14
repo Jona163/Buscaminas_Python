@@ -38,3 +38,14 @@ def tablero1():
             if opcion in ("f", "fácil"):
                 tablero = matriz(15, 10)
                 minas(15, 10, tablero, 75)
+               return tablero, 15, 10
+            elif opcion in ("m", "medio"):
+                tablero = matriz(25, 20)
+                minas(25, 20, tablero, 250)
+                return tablero, 25, 20
+            elif opcion in ("d", "difícil"):
+                tablero = matriz(35, 30)
+                minas(35, 30, tablero, 525)
+                return tablero, 35, 30
+            else:
+                print("Debe escoger una de las opciones del menú.")
