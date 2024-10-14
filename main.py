@@ -132,3 +132,12 @@ def jugada(filas, columnas):
             break
         print("Debe escoger una ficha que esté dentro del rango de fila y columna.")
     return fila, columna
+
+# Función principal en la que corre el juego.
+def jugar(tablero, filas, columnas):
+    nueva = matriz(filas, columnas, ".")
+    while True:
+        mostrar(nueva, filas, columnas, ".")
+        fila, columna = jugada(filas, columnas)
+        fila -= 1
+        columna -= 1
