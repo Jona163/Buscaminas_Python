@@ -1,8 +1,3 @@
-# Autor: Jonathan Hernández
-# Fecha: 13 octubre 2024
-# Descripción: Buscaminas en Python.
-# GitHub: https://github.com/Jona163
-
 from random import randint
 
 # Juego de Buscaminas desarrollado en Python.
@@ -38,7 +33,7 @@ def tablero1():
             if opcion in ("f", "fácil"):
                 tablero = matriz(15, 10)
                 minas(15, 10, tablero, 75)
-               return tablero, 15, 10
+                return tablero, 15, 10
             elif opcion in ("m", "medio"):
                 tablero = matriz(25, 20)
                 minas(25, 20, tablero, 250)
@@ -49,7 +44,7 @@ def tablero1():
                 return tablero, 35, 30
             else:
                 print("Debe escoger una de las opciones del menú.")
-   else:
+    else:
         filas = int(input("Ingresa el número de filas que deseas: "))
         columnas = int(input("Ingresa el número de columnas que desea: "))
         while True:
@@ -162,10 +157,12 @@ print("El número 0 indica que no hay ninguna bomba alrededor.")
 print("Para seleccionar la ficha a destapar, especifica la fila y la columna.")
 print("¡Que empiece el juego!")
 
+#Jugar
 jugar1 = True
 
 while jugar1:
     tablero, filas, columnas = tablero1()
     tablero = numeros(tablero, filas, columnas)
     jugar(tablero, filas, columnas)
+    #ciclo para ver si quiere volver a jugar
     jugar1 = int(input("¿Desea jugar otra vez? (sí = 1)(no = 0): "))
