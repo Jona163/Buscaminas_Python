@@ -163,3 +163,8 @@ print("Para seleccionar la ficha a destapar, especifica la fila y la columna.")
 print("¡Que empiece el juego!")
 
 jugar1 = True
+
+while jugar1:
+    tablero, filas, columnas = tablero1()
+    tablero = numeros(tablero, filas, columnas)
+    jugar(tablero, filas, columnas)
