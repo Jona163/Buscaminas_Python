@@ -19,7 +19,7 @@ Para jugar, necesitas tener Python 3 instalado en tu sistema. Si no lo tienes, d
 1. Clona este repositorio en tu máquina:
 
    ```bash
-   git clone https://github.com/tu-usuario/buscaminas-python.git
+   git clone https://github.com/https://github.com/Jona163/buscaminas-python.git
    ```
 
 2. Navega al directorio del proyecto:
