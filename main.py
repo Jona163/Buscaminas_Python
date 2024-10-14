@@ -24,3 +24,17 @@ def minas(filas, columnas, tablero, minaz):
             tablero[fil][col] = True
             mi += 1
     return tablero
+
+# Crear el tablero de acuerdo a las especificaciones del jugador.
+def tablero1():
+    opcion = int(input("Quiere un juego aleatorio (si = 1)(no = 0): "))
+    if opcion:
+        while True:
+            print("¿Qué dificultad desea?")
+            print("\t1. Fácil.")
+            print("\t2. Medio.")
+            print("\t3. Difícil.")
+            opcion = input("Elija una opción (f o fácil)(m o medio)(d o difícil): ").lower()
+            if opcion in ("f", "fácil"):
+                tablero = matriz(15, 10)
+                minas(15, 10, tablero, 75)
