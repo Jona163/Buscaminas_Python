@@ -147,3 +147,9 @@ def jugar(tablero, filas, columnas):
                 destapar(filas, columnas, fila, columna, tablero, nueva)
         else:
             mostrar(tablero, filas, columnas, " ")
+            print(f"¡Has perdido! Eso te pasa por destapar la ficha en la posición ({fila + 1},{columna + 1}).")
+            break
+        if all(nueva[i][j] != "." for i in range(filas) for j in range(columnas)):
+            print("¡Has ganado el juego!")
+            print("¡Felicitaciones!")
+            break
